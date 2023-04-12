@@ -1,7 +1,6 @@
 <script setup>
 import { Inertia } from '@inertiajs/inertia'
 
-
 defineProps({
   id : String,
   blog: Object
