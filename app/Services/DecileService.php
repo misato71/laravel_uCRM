@@ -22,14 +22,14 @@ class DecileService
 
   // dd($subQuery);
 
-  // 3. 購入順に連番を振る
-  DB::statement('set @row_num = 0;');
-  $subQuery = DB::table($subQuery)
-  ->selectRaw('
-  @row_num:= @row_num+1 as row_num,
-  customer_id,
-  customer_name,
-  total');
+    // 3. 購入順に連番を振る
+    DB::statement('set @row_num = 0;');
+    $subQuery = DB::table($subQuery)
+    ->selectRaw('
+    @row_num:= @row_num+1 as row_num,
+    customer_id,
+    customer_name,
+    total');
 
     // dd($subQuery);
 
